@@ -12,7 +12,10 @@
     "format:check": "prettier --check .",
     "preview": "vite preview",
     "serve": "vite preview --port 4173",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "deploy:vercel": "vercel --prod",
+    "deploy:build": "npm run build && echo 'Build ready! Upload dist folder to your hosting service.'",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
